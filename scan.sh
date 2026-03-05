@@ -55,10 +55,10 @@ else
   host_count=$((2 ** host_bits))
 
   # now we use bad maths to find start and end range
-  start_$(($((last_oct / host_count)) * host_count + 1))
+  start_=$(($((last_oct / host_count)) * host_count + 1))
   end_=$((start_ + host_count - 2))
 fi
-printf "${GREEN}[Scanning from ${net_addr}.${start_} to ${net_addr}.${net_addr}.${end}]${NC}\n\n"
+printf "${GREEN}[Scanning from ${net_addr}.${start_} to ${net_addr}.${end}]${NC}\n\n"
 
 for ((i=$start_; i<=$end_; i++))
 do
